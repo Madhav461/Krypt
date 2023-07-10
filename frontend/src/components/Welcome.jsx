@@ -3,13 +3,13 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { SiEthereum } from "react-icons/si";
 import { BsInfoCircle } from "react-icons/bs";
 import Loader from './Loader'
-import { TransactionContext,TransactionsProvider } from "../context/TransactionContext";
+import { TransactionContext } from "../context/TransactionContext";
 import {shortenAddress} from '../utils/shortenAddress';
 const Input = ({ placeholder, name, type, value, handleChange }) => (
   <input
     placeholder={placeholder}
     type={type}
-    step="0.0001"
+    step="0.000001"
     value={value}
     onChange={(e) => handleChange(e, name)}
     className="my-2 w-full rounded-sm p-2 outline-none bg-transparent text-white border-none text-sm white-glassmorphism"

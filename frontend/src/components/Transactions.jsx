@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { TransactionContext } from "../context/TransactionContext";
 
@@ -47,7 +47,13 @@ const TransactionsCard = ({ addressTo, addressFrom, timestamp, message, keyword,
 };
 
 const Transactions = () => {
-  const { transactions,currentAccount } = useContext(TransactionContext);
+  const { transactions,currentAccount,transactionCount } = useContext(TransactionContext);
+  // useEffect(() => {
+  //   // checkIfWalletIsConnect();
+  //   window.reload();
+  //   // checkIfTransactionsExists();
+  // }, [transactionCount]);
+
 
   return (
     <div className="flex w-full justify-center items-center 2xl:px-20 gradient-bg-transactions">
@@ -58,7 +64,7 @@ const Transactions = () => {
             Latest Transactions
           </h3>
           <div className="flex flex-wrap justify-center items-center mt-10">
-          {[...dummyData, ...transactions].reverse().map((transaction, i) => (
+          {[ ...transactions].reverse().map((transaction, i) => (
             <TransactionsCard key={i} {...transaction}></TransactionsCard>
           ))}
         </div>
