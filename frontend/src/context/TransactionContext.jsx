@@ -140,10 +140,12 @@ export const TransactionsProvider = ({ children }) => {
       await transactionHash.wait();
       setIsLoading(false);
       console.log(`Success-${transactionHash.hash}`);
-      
+      alert ("Transaction Successful!");
+      window.reload();
       const transactionCount=await transactionContract.getTransactioncount();
       setTransactionCount(transactionCount.toNumber());
-        window.reload();
+        
+        
     }
     catch(error){
       console.log(error);
