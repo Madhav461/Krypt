@@ -5,7 +5,8 @@ import { AiOutlineClose } from "react-icons/ai";
 import logo from "./images/logo.png";
 import { TransactionContext } from "./context/TransactionContext";
 const NavBarItem = ({ title, classprops ,Link}) => (
-  <a href={Link}><li className={`mx-4 cursor-pointer ${classprops} `}>{title}</li></a>
+  <button className={`mx-4 cursor-pointer ${classprops} `} onClick={() => window.open(Link)} >{title}</button>
+  // <a href={Link}><li </li></a>
 );
 
 
@@ -25,10 +26,10 @@ const Navbar = () => {
             <NavBarItem title="Finance" Link="https://www.cnbctv18.com/personal-finance/" key={1} classprops="my-2 text-lg mr-4" ></NavBarItem>
             <NavBarItem title="Exchange" Link="https://www.google.com/finance/quote/INR-USD?sa=X&ved=2ahUKEwju4uDv0oOAAxU69zgGHTlOD54QmY0JegQIBhAc" key={0} classprops="my-2 text-lg mr-4" ></NavBarItem>
             <NavBarItem title="Wallet" Link ={`https://sepolia.etherscan.io/address/${currentAccount}`} key={0} classprops="my-2 text-lg mr-4" ></NavBarItem>
-        <a href="/signup"><li className="bg-[#2952e3] ethereum-logo py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]">
-          Login
-        </li>
-        </a>
+        {/* <a href="/signup"><li className="bg-[#2952e3] ethereum-logo py-2 px-7 mx-4 rounded-full cursor-pointer hover:bg-[#2546bd]"> */}
+          {/* Login */}
+        {/* </li> */}
+        {/* </a> */}
       </ul>
       <div className="flex relative">
         {!toggleMenu && (
@@ -52,10 +53,10 @@ const Navbar = () => {
               (item, index) => <NavBarItem key={item + index} title={item} link  />,
             )} */}
 
-            <a href="/signup"><li className="bg-[#2952e3] py-2 px-7  ethereum-logo rounded-full cursor-pointer hover:bg-[#2546bd]">
+            {/* <a href="/signup"><li className="bg-[#2952e3] py-2 px-7  ethereum-logo rounded-full cursor-pointer hover:bg-[#2546bd]">
           Login
         </li>
-        </a>
+        </a> */}
           </ul>
         )}
       </div>

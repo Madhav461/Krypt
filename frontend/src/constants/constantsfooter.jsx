@@ -69,7 +69,7 @@ export const footerLinks = [
     {
       id: "social-media-1",
       icon: "https://img.icons8.com/fluency/1x/instagram-new.png",
-      link: "https://www.instagram.com/",
+      link: "https://www.instagram.com/madhavgiridhar/",
     },
     {
       id: "social-media-2",
@@ -84,7 +84,7 @@ export const footerLinks = [
     {
       id: "social-media-4",
       icon:"https://img.icons8.com/color/1x/linkedin.png",
-      link: "https://www.linkedin.com/",
+      link: "https://www.linkedin.com/in/giridhar-madhav-b8731b246/",
     },
   ];
   
