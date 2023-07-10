@@ -19,7 +19,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 
 
 const Welcome=()=>{
-  const {connectWallet,currentAccount,formData,setformData,handleChange,sendTransaction}=useContext(TransactionContext);
+  const {connectWallet,currentAccount,formData,setformData,handleChange,sendTransaction,isLoading}=useContext(TransactionContext);
 
 
 
@@ -132,7 +132,7 @@ const companyCommonStyles = "min-h-[70px] ethereum-logo sm:px-0 px-2 sm:min-w-fu
 
             <div className="h-[1px] w-full bg-gray-400 my-2" />
 
-            {false
+            {isLoading
               ? <Loader />
               : (
                 <button
